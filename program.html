@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spor Programın</title>
+        <style>
+        body{
+            font-size: 25px;
+            font-family:Arial, Helvetica, sans-serif;
+            color: darkgreen;
+            opacity: 15;
+            text-align: center;
+        }
+        nav {
+            background-color: #ffffff;   /* Menü arkaplan rengi */
+            display: flex;               /* Yanyana hizalama */
+            justify-content: space-around; /* Boşlukları dengeli yayma */
+            align-items: center;         /* Dikey ortalama */
+            padding: 15px 20px;          /* İç boşluk */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Hafif gölge */
+            position: sticky;            /* Scroll'da yapışık kalsın */
+            top: 0;
+            z-index: 100;                /* Üste çıksın */
+        }
+                nav a {
+            color: #333;                  /* Yazı rengi */
+            text-decoration: none;        /* Alt çizgi yok */
+            font-family: "Helvetica Neue", sans-serif; /* Şık font */
+            font-weight: 500;             /* Orta kalınlık */
+            padding: 8px 16px;            /* Tıklanabilir alan */
+            border-radius: 8px;           /* Köşeleri yumuşak */
+            transition: background-color 0.3s, color 0.3s; /* Hover efekti */
+        }
+        nav a.active {
+            background-color: #555;       /* Daha koyu gri */
+            color: #fff;                  /* Yazı beyaz */
+        }
+        nav a:hover {
+            background-color: #333;       /* Arkaplan koyu */
+            color: #fff;                  /* Yazı beyaz */
+        }
+                @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;   /* Dikey hizala */
+            }
+            .nav a {
+                margin: 5px 0;            /* Link aralarına boşluk */
+            }
+        }
+        .edit-toggle {
+    text-align: center;
+    margin-bottom: 20px;
+    }
+    #edit-mode {
+        display: none;
+    }
+    label[for="edit-mode"] {
+        background: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+    label[for="edit-mode"]:hover {
+        background: #0056b3;
+    }
+    .section {
+        background: #fff;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 12px;
+        position: relative;
+        transition: background 0.3s;
+    }
+    .section input[type="checkbox"] {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+    }
+    .section:has(input[type="checkbox"]:checked) {
+        background: #d4edda;
+        color: #155724;
+    }
+    .title, .set, .rep {
+        margin: 8px 0;
+        font-weight: 600;
+    }
+    .edit-input {
+        display: none;
+        width: 100%;
+        padding: 6px;
+        margin-top: 4px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-sizing: border-box;
+    }
+    #edit-mode:checked ~ .container .edit-input {
+        display: block;
+    }
+    #edit-mode:checked ~ .container .static-text {
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <h1>Burada ise sana rehberlik eden güzel spor programın yer alacak</h1>
+    <div class="edit-toggle">
+    <input type="checkbox" id="edit-mode">
+    <label for="edit-mode">Düzenle</label>
+    </div><div class="container">
+    <!-- 15 Bölüm -->
+    <!-- Sadece 1 bölüm örneği, bunu 15 kere çoğaltacağız -->  <!-- Bölüm 1 -->  <div class="section">
+        <input type="checkbox">
+        <div class="title">
+        <span class="static-text">Shoulder Press</span>
+        <input class="edit-input" type="text" value="Başlık 1">
+        </div>
+        <div class="set">
+        <span class="static-text">Set sayısı: 3</span>
+        <input class="edit-input" type="number" value="3">
+        </div>
+        <div class="rep">
+        <span class="static-text">Tekrar sayısı: 12</span>
+        <input class="edit-input" type="number" value="12">
+        </div>
+    </div>  <!-- Bölüm 2 -->  <div class="section">
+        <input type="checkbox">
+        <div class="title">
+        <span class="static-text">İki başlı kas açma</span>
+        <input class="edit-input" type="text" value="Başlık 2">
+        </div>
+        <div class="set">
+        <span class="static-text">Set sayısı: 3</span>
+        <input class="edit-input" type="number" value="4">
+        </div>
+        <div class="rep">
+        <span class="static-text">Tekrar sayısı: 12</span>
+        <input class="edit-input" type="number" value="10">
+        </div>
+    </div>  <!-- Bölüm 3 -->  <div class="section">
+        <input type="checkbox">
+        <div class="title">
+        <span class="static-text">Sehpada kol açma</span>
+        <input class="edit-input" type="text" value="Başlık 3">
+        </div>
+        <div class="set">
+        <span class="static-text">Set sayısı: 3</span>
+        <input class="edit-input" type="number" value="5">
+        </div>
+        <div class="rep">
+        <span class="static-text">Tekrar sayısı: 12</span>
+        <input class="edit-input" type="number" value="8">
+        </div>
+    </div>  <!-- Bölüm 4 -->  <div class="section">
+        <input type="checkbox">
+        <div class="title">
+        <span class="static-text">Sehpada Üç başlı kas itme</span>
+        <input class="edit-input" type="text" value="Başlık 4">
+        </div>
+        <div class="set">
+        <span class="static-text">Set sayısı: 3</span>
+        <input class="edit-input" type="number" value="3">
+        </div>
+        <div class="rep">
+        <span class="static-text">Tekrar sayısı: 12</span>
+        <input class="edit-input" type="number" value="15">
+        </div>
+    </div>  <!-- Bölüm 5 -->  <div class="section">
+        <input type="checkbox">
+        <div class="title">
+        <span class="static-text">Halter barı ile İki başlı kas açma</span>
+        <input class="edit-input" type="text" value="Başlık 5">
+        </div>
+        <div class="set">
+        <span class="static-text">Set sayısı: 3</span>
+        <input class="edit-input" type="number" value="4">
+        </div>
+        <div class="rep">
+        <span class="static-text">Tekrar sayısı: 12</span>
+        <input class="edit-input" type="number" value="10">
+        </div>
+            <!-- 6 Bölüm -->
+    <!-- Sadece 1 bölüm örneği, bunu 15 kere çoğaltacağız -->  <!-- Bölüm 1 -->  <div class="section">
+        <input type="checkbox">
+        <div class="title">
+        <span class="static-text">Göğüs presi halter barı</span>
+        <input class="edit-input" type="text" value="Başlık 1">
+        </div>
+        <div class="set">
+        <span class="static-text">Set sayısı: 3</span>
+        <input class="edit-input" type="number" value="3">
+        </div>
+        <div class="rep">
+        <span class="static-text">Tekrar sayısı: 12</span>
+        <input class="edit-input" type="number" value="12">
+        </div>
+    </div>  <!-- Bölüm 7 -->  <div class="section">
+        <input type="checkbox">
+        <div class="title">
+        <span class="static-text">Dead Lift</span>
+        <input class="edit-input" type="text" value="Başlık 2">
+        </div>
+        <div class="set">
+        <span class="static-text">Set sayısı: 3</span>
+        <input class="edit-input" type="number" value="4">
+        </div>
+        <div class="rep">
+        <span class="static-text">Tekrar sayısı: 12</span>
+        <input class="edit-input" type="number" value="10">
+        </div>
+    </div>  <!-- Bölüm 8  -->  <div class="section">
+        <input type="checkbox">
+        <div class="title">
+        <span class="static-text">Bulgarian spirit squat</span>
+        <input class="edit-input" type="text" value="Başlık 3">
+        </div>
+        <div class="set">
+        <span class="static-text">Set sayısı: 3</span>
+        <input class="edit-input" type="number" value="5">
+        </div>
+        <div class="rep">
+        <span class="static-text">Tekrar sayısı: 12</span>
+        <input class="edit-input" type="number" value="8">
+        </div>
+    </div>  <!-- Bölüm 9 -->  <div class="section">
+        <input type="checkbox">
+        <div class="title">
+        <span class="static-text">Mekik</span>
+        <input class="edit-input" type="text" value="Başlık 4">
+        <div class="rep">
+        <span class="static-text">Tekrar sayısı: 35</span>
+        <input class="edit-input" type="number" value="15">
+        </div>
+    </div>  <!-- Bölüm 10 -->  <div class="section">
+        <input type="checkbox">
+        <div class="title">
+        <span class="static-text">Plank</span>
+        <input class="edit-input" type="text" value="Başlık 5">
+        </div>
+        <div class="set">
+        <span class="static-text">Set sayısı: 3</span>
+        <input class="edit-input" type="number" value="4">
+        </div>
+        <div class="rep">
+        <span class="static-text">Süre: 1:00</span>
+        <input class="edit-input" type="number" value="10">
+        </div>
+            <!-- 11 Bölüm -->
+    <!-- Sadece 1 bölüm örneği, bunu 15 kere çoğaltacağız -->  <!-- Bölüm 1 -->  <div class="section">
+        <input type="checkbox">
+        <div class="title">
+        <span class="static-text"></span>
+        <input class="edit-input" type="text" value="Başlık 1">
+        </div>
+        <div class="set">
+        <span class="static-text">Set sayısı: 3</span>
+        <input class="edit-input" type="number" value="3">
+        </div>
+        <div class="rep">
+        <span class="static-text">Tekrar sayısı: 12</span>
+        <input class="edit-input" type="number" value="12">
+        </div>
+    </div>  <!-- Bölüm 12 -->  <div class="section">
+        <input type="checkbox">
+        <div class="title">
+        <span class="static-text">Jumping Jack</span>
+        <input class="edit-input" type="text" value="Başlık 2">
+        </div>
+        <div class="set">
+        <span class="static-text">Süre: 1:00</span>
+        <input class="edit-input" type="number" value="4">
+        </div>
+        <div class="rep">
+        <span class="static-text">Set sayısı: 3</span>
+        <input class="edit-input" type="number" value="10">
+        </div>
+</body>
+</html>

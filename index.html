@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.H.G. HomeFitness</title>
+    <style>
+        body{
+            font-size: 25px;
+            font-family:Arial, Helvetica, sans-serif;
+            color: darkgreen;
+            opacity: 15;
+            text-align: center;
+        }
+        nav {
+            background-color: #ffffff;   /* Menü arkaplan rengi */
+            display: flex;               /* Yanyana hizalama */
+            justify-content: space-around; /* Boşlukları dengeli yayma */
+            align-items: center;         /* Dikey ortalama */
+            padding: 15px 20px;          /* İç boşluk */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Hafif gölge */
+            position: sticky;            /* Scroll'da yapışık kalsın */
+            top: 0;
+            z-index: 100;                /* Üste çıksın */
+        }
+                nav a {
+            color: #333;                  /* Yazı rengi */
+            text-decoration: none;        /* Alt çizgi yok */
+            font-family: "Helvetica Neue", sans-serif; /* Şık font */
+            font-weight: 500;             /* Orta kalınlık */
+            padding: 8px 16px;            /* Tıklanabilir alan */
+            border-radius: 8px;           /* Köşeleri yumuşak */
+            transition: background-color 0.3s, color 0.3s; /* Hover efekti */
+        }
+        nav a.active {
+            background-color: #555;       /* Daha koyu gri */
+            color: #fff;                  /* Yazı beyaz */
+        }
+        nav a:hover {
+            background-color: #333;       /* Arkaplan koyu */
+            color: #fff;                  /* Yazı beyaz */
+        }
+                @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;   /* Dikey hizala */
+            }
+            .nav a {
+                margin: 5px 0;            /* Link aralarına boşluk */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="active">Ana Sayfa</a>
+        <br>
+        <a href="program.html">Programın</a>
+        <br>
+        <a href="attention.html">Dikkat etmen gerekenler</a>
+        <br>
+        <a href="motivation.html">Motivasyon sözlerin</a>
+        <br>
+    </nav>
+    <h1> Welcome to M.H.G. HomeFitness Pro</h1>
+    <h3>Programıma Hoş Geldin Baba!</h3>
+    <p>Bu program senin için özel olarak hazırlandı. İçinde günlük motivasyon sözleri, dikkat etmen gereken önemli hatırlatmalar ve hayatını kolaylaştıracak pratik programlar var.
+
+Her zaman yanında olduğumu unutma. Başarı, sabır ve azimle her şey mümkün. Bu yolculukta sana destek olmak benim en büyük mutluluğum.
+
+Haydi, birlikte güçlenelim ve her günü en iyi şekilde değerlendirelim!"</p>
+
+
+
+</body>
+</html>

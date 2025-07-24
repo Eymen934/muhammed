@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunlara dikkat etmelisin</title>
+        <style>
+        body{
+            font-size: 25px;
+            font-family:Arial, Helvetica, sans-serif;
+            color: darkgreen;
+            opacity: 15;
+            text-align: center;
+        }
+        nav {
+            background-color: #ffffff;   /* Menü arkaplan rengi */
+            display: flex;               /* Yanyana hizalama */
+            justify-content: space-around; /* Boşlukları dengeli yayma */
+            align-items: center;         /* Dikey ortalama */
+            padding: 15px 20px;          /* İç boşluk */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Hafif gölge */
+            position: sticky;            /* Scroll'da yapışık kalsın */
+            top: 0;
+            z-index: 100;                /* Üste çıksın */
+        }
+                nav a {
+            color: #333;                  /* Yazı rengi */
+            text-decoration: none;        /* Alt çizgi yok */
+            font-family: "Helvetica Neue", sans-serif; /* Şık font */
+            font-weight: 500;             /* Orta kalınlık */
+            padding: 8px 16px;            /* Tıklanabilir alan */
+            border-radius: 8px;           /* Köşeleri yumuşak */
+            transition: background-color 0.3s, color 0.3s; /* Hover efekti */
+        }
+        nav a.active {
+            background-color: #555;       /* Daha koyu gri */
+            color: #fff;                  /* Yazı beyaz */
+        }
+        nav a:hover {
+            background-color: #333;       /* Arkaplan koyu */
+            color: #fff;                  /* Yazı beyaz */
+        }
+                @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;   /* Dikey hizala */
+            }
+            .nav a {
+                margin: 5px 0;            /* Link aralarına boşluk */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <br>
+        <a href="program.html">Programın</a>
+        <br>
+        <a href="attention.html" class="active">Dikkat etmen gerekenler</a>
+        <br>
+        <a href="motivation.html">Motivasyon sözlerin</a>
+        <br>
+    </nav>
+    <h1>Spor esnasında dikkat etmen gerekenler neler? Neden?</h1>
+    <ul>
+        <li>Önce tüm vücut için ısınma yapıp sonra spora başalaman sakatlık riskini azaltır</li>
+        <li>Spor esnasında ağırlıkları dengeli ve temkinli şekilde kaldırman hem bir yerine zarar gelmemesi için hem de parklerin zarar görmemesi için önemli.</li>
+        <li>Ağırlık kaldırırken eğer hareketi istem dışı doğru yapamıyorsan o ağırlık sana ağır demektir.</li>
+        <li>Kendine uygun, kaldırıp hareketi doğru yapabileceğin ağırlığı seçmelisin.</li>
+        <li>Yavaş yavaş başlayıp sonra tabii ki daha ağıra geçeceksin.</li>
+        <li>ZATEN SEN BUNLARI YAPABİLECEK DÜZEYDE BİLİNÇLİ BİR SPORCUSUN.</li>
+        <h1>SANA GÜVENİYORUZ KRAL!</h1>
+    </ul>
+
+</body>
+</html>
